@@ -8,7 +8,7 @@ A manual cutting IIR filter based on the modified leaky integrator + zero-pole a
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(z)=&space;\frac{(1-e^{-i\omega&space;_{0}}z^{-1})(1-e^{i\omega&space;_{0}}z^{-1})}{(1-\lambda&space;e^{-i\omega&space;_{0}}z^{-1})(1-\lambda&space;e^{i\omega&space;_{0}}z^{-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(z)=&space;\frac{(1-e^{-i\omega&space;_{0}}z^{-1})(1-e^{i\omega&space;_{0}}z^{-1})}{(1-\lambda&space;e^{-i\omega&space;_{0}}z^{-1})(1-\lambda&space;e^{i\omega&space;_{0}}z^{-1})}" title="H(z)= \frac{(1-e^{-i\omega _{0}}z^{-1})(1-e^{i\omega _{0}}z^{-1})}{(1-\lambda e^{-i\omega _{0}}z^{-1})(1-\lambda e^{i\omega _{0}}z^{-1})}" /></a>
 
-An inverse z-transform of the above
+An inverse z-transform of the above gives
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_{n}-2*\lambda*cos(\omega&space;_{0})*y_{n-1}&plus;\lambda&space;^{2}*y_{n-2}=x_{n}-2*cos(\omega&space;_{0})*x_{n-1}&plus;x_{n-2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{n}-2*\lambda*cos(\omega&space;_{0})*y_{n-1}&plus;\lambda&space;^{2}*y_{n-2}=x_{n}-2*cos(\omega&space;_{0})*x_{n-1}&plus;x_{n-2}" title="y_{n}-2*\lambda*cos(\omega _{0})*y_{n-1}+\lambda ^{2}*y_{n-2}=x_{n}-2*cos(\omega _{0})*x_{n-1}+x_{n-2}" /></a>
 
