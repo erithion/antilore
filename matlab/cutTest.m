@@ -4,7 +4,7 @@ T = 20;
 f = 1/T;
 w = 2 * pi * f; % angular freq
 
-figure('Name','Filter test on sinusoids');
+figure('Name', 'Filter test on sinusoids');
 
 % оригинал
 t = linspace(0, 1000 - f, 1000);
@@ -27,33 +27,33 @@ plot(tt, abs(ORIG));
 grid on;
 ylabel('Magnitude');
 title('FFT');
-set(gca,'TickLabelInterpreter','latex');
-set(gca,'XTick', [-pi -pi/5 -pi/10 0 pi/10 pi/5 pi]);
-set(gca,'XTickLabel', {'$$-\pi$$','$$-\frac{\pi}{5}$$','$$-\frac{\pi}{10}$$','0','$$\frac{\pi}{10}$$','$$\frac{\pi}{5}$$','\pi'});
-%set(gca,'XTick', [-pi -17*pi/70  -pi/5 -3*pi/70 0 3*pi/70 pi/5 17*pi/70 pi]);
-%set(gca,'XTickLabel', {'$$-\pi$$', '$$-\frac{17}{70}\pi$$','$$-\frac{\pi}{5}$$','$$-\frac{3}{70}\pi$$','0','$$\frac{3}{70}\pi$$','$$\frac{\pi}{5}$$', '$$\frac{17}{70}\pi$$','$$\pi$$'});
+set(gca, 'TickLabelInterpreter', 'latex');
+set(gca, 'XTick', [-pi -pi/5 -pi/10 0 pi/10 pi/5 pi]);
+set(gca, 'XTickLabel', {'$$-\pi$$', '$$-\frac{\pi}{5}$$', '$$-\frac{\pi}{10}$$', '0', '$$\frac{\pi}{10}$$', '$$\frac{\pi}{5}$$', '\pi'});
+%set(gca, 'XTick', [-pi -17*pi/70  -pi/5 -3*pi/70 0 3*pi/70 pi/5 17*pi/70 pi]);
+%set(gca, 'XTickLabel', {'$$-\pi$$', '$$-\frac{17}{70}\pi$$', '$$-\frac{\pi}{5}$$', '$$-\frac{3}{70}\pi$$', '0', '$$\frac{3}{70}\pi$$', '$$\frac{\pi}{5}$$', '$$\frac{17}{70}\pi$$', '$$\pi$$'});
 xlim([-pi/2 pi/2])
 
 % ccde
 L = 0.99;       % lambda
 
-%[b,a] = ccdeCut(L, 2*w);
-[b,a] = ccdeCut(L, w);
-[H, W] = freqz(b, a, 1000);
+[b,a] = cutDifference(L, w);
+%[b,a] = cutDifference(L, 2*w);
+[H, W] = freqz(b, a, n);
 subplot(4, 1, 3);
-plot(W, abs(H) );
+plot(W, abs(H));
 grid on;
 ylabel('Magnitude');
 title('CCDE frequency response');
-set(gca,'TickLabelInterpreter','latex');
-%set(gca,'XTick', [0 pi/5 pi]);
-%set(gca,'XTickLabel', {'0','$$\frac{\pi}{5}$$','$$\pi$$'});
-set(gca,'XTick', [0 pi/10 pi]);
-set(gca,'XTickLabel', {'0','$$\frac{\pi}{10}$$','$$\pi$$'});
+set(gca, 'TickLabelInterpreter', 'latex');
+set(gca, 'XTick', [0 pi/10 pi]);
+set(gca, 'XTickLabel', {'0', '$$\frac{\pi}{10}$$', '$$\pi$$'});
+%set(gca, 'XTick', [0 pi/5 pi]);
+%set(gca, 'XTickLabel', {'0', '$$\frac{\pi}{5}$$', '$$\pi$$'});
 
 % фильтрация; другой способ это через свертку и cdde
-%[B, A] = tfCut(1, L, 2*w);
-[B, A] = tfCut(1, L, w);
+[B, A] = cutTransfer(1, L, w);
+%[B, A] = cutTransfer(1, L, 2*w);
 subplot(4, 1, 4);
 filt = filter(B, A, orig);
 plot(t, filt);

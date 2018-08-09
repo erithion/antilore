@@ -1,4 +1,4 @@
-function [b, a] = ccdeCut(lambda, w0)
+function [b, a] = cutDifference(lambda, w0)
 % Разностное уравнение для обнуления частоты, получено обратным
 % z-преобразованием из трансфер-функции tfCut
 % Мат. вид: y[n] - 2 L cos w0 y[n-1] + L^2 y[n-2] = x[n] - 2 cos w0 x[n-1] + x[n-2]
