@@ -4,7 +4,7 @@ Experimental VideoLAN audio-filter
 
 ## Matlab modelling notes
 
-A manual cutting filter based on the modified leaky integrator + zero-pole analysis
+A manual cutting IIR filter based on the modified leaky integrator + zero-pole analysis
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H(z)=&space;\frac{(1-e^{-i\omega&space;_{0}}z^{-1})(1-e^{i\omega&space;_{0}}z^{-1})}{(1-\lambda&space;e^{-i\omega&space;_{0}}z^{-1})(1-\lambda&space;e^{i\omega&space;_{0}}z^{-1})}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H(z)=&space;\frac{(1-e^{-i\omega&space;_{0}}z^{-1})(1-e^{i\omega&space;_{0}}z^{-1})}{(1-\lambda&space;e^{-i\omega&space;_{0}}z^{-1})(1-\lambda&space;e^{i\omega&space;_{0}}z^{-1})}" title="H(z)= \frac{(1-e^{-i\omega _{0}}z^{-1})(1-e^{i\omega _{0}}z^{-1})}{(1-\lambda e^{-i\omega _{0}}z^{-1})(1-\lambda e^{i\omega _{0}}z^{-1})}" /></a>
 
