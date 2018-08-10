@@ -16,10 +16,10 @@ An inverse z-transform of the above gives a CCDE
 ### A two frequencies signal
 ![Filter in Matlab](https://github.com/erithion/antilore/raw/master/doc/matlab_cut_filter.png  "Filter in Matlab")
 
-### Modulation within
+### A modulation within
 ![Filter in Matlab](https://github.com/erithion/antilore/raw/master/doc/matlab_cut_filter_modulated.png  "Filter in Matlab")
 
-### 2 frequencies cutting
+### Cutting of 2 frequencies at one stroke
 
 ![Filter in Matlab](https://github.com/erithion/antilore/raw/master/doc/matlab_cut_2freq_filter_modulated_zp_plot.png  "Filter in Matlab")
 
