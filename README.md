@@ -36,3 +36,5 @@ hence the CCDE is
 
 ![Filter in Matlab](https://github.com/erithion/antilore/raw/master/doc/matlab_cut_2freq_filter_modulated.png  "Filter in Matlab")
 
+## VLC plugin
+*TBD*
