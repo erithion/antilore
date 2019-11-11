@@ -5,8 +5,7 @@ An experimental VideoLAN audio-filter
 
 A 2nd order transfer function of a cutting IIR filter derived graphically from a zero-pole plot of the modified leaky integrator
 
-<!--  H(z)=\frac{(1-e^{-i\omega_{0}}z^{-1})(1-e^{i\omega_{0}}z^{-1})}{(1-\lambdae^{-i\omega_{0}}z^{-1})(1-\lambdae^{i\omega_{0}}z^{-1})} -->
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20H%28z%29%3D%5Cfrac%7B%281-e%5E%7B-i%5Comega_%7B0%7D%7Dz%5E%7B-1%7D%29%281-e%5E%7Bi%5Comega_%7B0%7D%7Dz%5E%7B-1%7D%29%7D%7B%281-%5Clambdae%5E%7B-i%5Comega_%7B0%7D%7Dz%5E%7B-1%7D%29%281-%5Clambdae%5E%7Bi%5Comega_%7B0%7D%7Dz%5E%7B-1%7D%29%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0) 
+![equation]((http://latex.codecogs.com/gif.latex?H(z)=&space;\frac{(1-e^{-i\omega&space;_{0}}z^{-1})(1-e^{i\omega&space;_{0}}z^{-1})}{(1-\lambda&space;e^{-i\omega&space;_{0}}z^{-1})(1-\lambda&space;e^{i\omega&space;_{0}}z^{-1})}) 
 
 An inverse z-transform of the above gives a CCDE
 
